@@ -4,11 +4,6 @@
 <?php include './inc/nav.php'; ?>
 
 <div class="container">
-
-    <!-- Header -->
-    <div class="header">
-    
-    </div>
     
     <h4>Sort by: </h4>
     
@@ -70,39 +65,41 @@
         </tr> 
     </table>
     
-    <div class="input-row_1">
-        
-    <div>
-        <label for="fn">First Name: </label>
-        <input name = 'fn' type="text">
-    </div>
-
-        <div>
-            <label for="ln">Last Name: </label>
-            <input name = 'ln' type="text">
-        </div>
-
-    </div>
-
-    <div class="input-row_2">
+     <!-- New Person Inputs -->
+     <div class="input-row_1">
         
         <div>
-            <label for="height">Height: </label>
-            <input name = 'height' type="text">
+            <label for="fn">First Name: </label>
+            <input name = 'fn' type="text">
         </div>
-        <div>
-            <label for="weight">Weight: </label>
-            <input name = 'weight' type="text">
+    
+            <div>
+                <label for="ln">Last Name: </label>
+                <input name = 'ln' type="text">
+            </div>
+    
         </div>
-        <div>
-            <label for="age">Age: </label>
-            <input name = 'age' type="text">
+    
+        <div class="input-row_2">
+            
+            <div>
+                <label for="height">Height: </label>
+                <input name = 'height' type="text">
+            </div>
+            <div>
+                <label for="weight">Weight: </label>
+                <input name = 'weight' type="text">
+            </div>
+            <div>
+                <label for="age">Age: </label>
+                <input name = 'age' type="text">
+            </div>
+    
         </div>
-
-    </div>
-
-
-    <a href="" class='btn_add-new q-btn'>Add New</a>
+    
+    
+        <a href="" class='btn_add-new q-btn'>Add New</a>
+    
 </div>
 
     <!-- Footer -->

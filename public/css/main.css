@@ -14,8 +14,10 @@ div {
     top: 0;
     left: 0;
     width: 100%;
-    background: purple;
-    color: white;
+    text-align: center;
+    /* background: rgb(255, 132, 239); */
+    /* color: rgb(248, 248, 248); */
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
 
 .nav_title {
@@ -34,7 +36,8 @@ div {
 
 .q-btn {
     font-size: 1.8rem;
-    background: blue;
+    background: rgb(0, 174, 255);
+    border-radius: 4px;
     color: white;
     padding: 5px;
     text-align: center;
@@ -52,7 +55,7 @@ tr {
 }
 
 td {
-    border-left: 1px solid rgb(255, 36, 36);
+    border-left: 1px solid rgb(199, 199, 199);
     padding-left: 5px;    
 }
 
@@ -62,13 +65,17 @@ td {
     margin: 7px 0;
 }
 
-th, td, h4, label, input {
+h4 {
+    font-size: 2rem;
+}
+
+th, td, label, input {
     font-size: 1.6rem;
 }
 
 label {
     display: inline-block;
-    background: orange;
+    /* background: orange; */
 }
 
 input {
@@ -91,4 +98,10 @@ input {
 .input-row_2 div {
     /* background: greenyellow; */
    
+}
+
+.btn_add-new {
+    display: grid;
+    width: 100%;
+    margin-top: 50px;
 }
