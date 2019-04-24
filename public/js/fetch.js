@@ -12,7 +12,7 @@ $(document).ready(() => {
   // CREATE a new entry
   makeSomething = () => {
     console.log('I will CREATE a new record');
-    fetch('http://localhost/prep_files/all_the_SQL/php/employees/getNames.php')
+    fetch('http://localhost/peopleComparer/php/queries/addPerson.php')
       // http://localhost/prep_files/all_the_SQL/php/mysql/post.php')
       .then(res => res.json())
       .then(posts => console.log(JSON.stringify(posts)))
@@ -22,11 +22,31 @@ $(document).ready(() => {
   // READ from db
   getAll = () => {
     console.log('from get all the records');
-    fetch('http://localhost/prep_files/all_the_SQL/php/employees/getNames.php')
-      // http://localhost/prep_files/all_the_SQL/php/mysql/read.php')
+    getPeople();
+    getStats();    
+  }
+
+  getPeople = () => {
+    console.log('from get all the PEOPLE records');
+    fetch('http://localhost/peopleComparer/php/queries/getPeople.php')
+    
+    .then(res => res.json())
+    .then(res => console.log(res))
+      // .then(myJson => console.log(JSON.stringify(myJson)))
+      // .then(res => console.log(res.json()))
+      // .then(posts => console.log((posts)))
+      .catch(err => console.log(err));
+  }
+
+    
+
+  getStats = () => {
+    console.log('from get all the STAT records');
+    fetch('http://localhost/peopleComparer/php/queries/getStats.php')
       .then(res => res.json())
-      .then(posts => console.log(JSON.stringify(posts)))
-      .catch(err => console.log(errLogStart, err, errLogEnd));
+      .then(res => console.log(res))
+      // .then(res => console.log(JSON.stringify(res)))
+      .catch(err => console.log(err));
   }
 
   // READ by single entry
@@ -58,4 +78,6 @@ $(document).ready(() => {
       .then(posts => console.log(JSON.stringify(posts)))
       .catch(err => console.log(errLogStart, err, errLogEnd));
   }
+
+  getAll();
 });

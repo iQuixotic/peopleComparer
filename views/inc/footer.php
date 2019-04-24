@@ -4,6 +4,6 @@
 
     <!-- user scripts -->
     <!-- <script src="/prep_files/all_the_sql/public/js/emp.js"></script> -->
-    <!-- <script src="./public/js/mysql/fetch.js"></script> -->
+    <script src="./public/js/fetch.js"></script>
 </body>
 </html>

@@ -13,9 +13,3 @@
         <link rel="stylesheet" type="text/css" href="./public/css/main.css">
     </head>
     <body>
-        
-<!-- 
-    <nav>
-        <a href="/">Main</a>
-        <a href="/views/pages/lasagna.php">Lasagna</a>
-    </nav> -->
