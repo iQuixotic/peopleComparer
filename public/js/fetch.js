@@ -29,13 +29,9 @@ $(document).ready(() => {
   getPeople = () => {
     console.log('from get all the PEOPLE records');
     fetch('http://localhost/peopleComparer/php/queries/getPeople.php')
-    
     .then(res => res.json())
     .then(res => console.log(res))
-      // .then(myJson => console.log(JSON.stringify(myJson)))
-      // .then(res => console.log(res.json()))
-      // .then(posts => console.log((posts)))
-      .catch(err => console.log(err));
+    .catch(err => console.log(err));
   }
 
     
@@ -45,7 +41,6 @@ $(document).ready(() => {
     fetch('http://localhost/peopleComparer/php/queries/getStats.php')
       .then(res => res.json())
       .then(res => console.log(res))
-      // .then(res => console.log(JSON.stringify(res)))
       .catch(err => console.log(err));
   }
 

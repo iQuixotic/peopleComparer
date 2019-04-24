@@ -1,19 +1,20 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/peopleComparer/php/config/connection.php';
-    // require_once $_SERVER['DOCUMENT_ROOT'] . '/peopleComparer/php/employees/Employee.php';
     
 /* $mysql is ready */
 // $id = $_GET['id'];
-$query = "SELECT * FROM names";
+$query = "SELECT * FROM stats";
 $result = mysqli_query($mysqli, $query);
 
 $rows = array();
 
 while($row = mysqli_fetch_assoc($result)) {
     $rows[] = array(
-    'id' => $row['id'], 
-    'firstname' => $row['firstname'],
-    'lastname' => $row['lastname']);
+    'personId' => $row['personId'], 
+    'height' => $row['height'],
+    'weight' => $row['weight'],
+    'age' => $row['age']);
+
 }    
 
 echo json_encode($rows);
