@@ -5,5 +5,7 @@
     <!-- user scripts -->
     <!-- <script src="/prep_files/all_the_sql/public/js/emp.js"></script> -->
     <script src="./public/js/fetch.js"></script>
+    <script src="./public/js/main.js"></script>
+
 </body>
 </html>

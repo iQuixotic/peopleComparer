@@ -2,6 +2,8 @@ const errLogStart = 'You know what your problem is... ';
 const errLogEnd = ' \n\n\n\t\t...dummy';
 let queryData, id;
 
+let tableId, tablefn, tableLn, tableHeight, tableWeight, tableAge, personArr;
+
 // Watch for input changes
 $(document).ready(() => {
   $(document).on('change', 'input', (e) => {
@@ -21,28 +23,33 @@ $(document).ready(() => {
 
   // READ from db
   getAll = () => {
-    console.log('from get all the records');
-    getPeople();
-    getStats();    
+    console.log('from get all the ALL records');
+    // getPeople();
+    // getStats();    
+    fetch('http://localhost/peopleComparer/php/queries/getPeople.php')
+      .then(res => res.json())
+      // .then(res => console.log(res))
+      .then(res => tablePrinter(res))
+      .catch(err => console.log(err));
   }
 
-  getPeople = () => {
-    console.log('from get all the PEOPLE records');
-    fetch('http://localhost/peopleComparer/php/queries/getPeople.php')
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
-  }
+  // getPeople = () => {
+  //   console.log('from get all the PEOPLE records');
+  //   fetch('http://localhost/peopleComparer/php/queries/getPeople.php')
+  //   .then(res => res.json())
+  //   .then(res => console.log(res))
+  //   .catch(err => console.log(err));
+  // }
 
     
 
-  getStats = () => {
-    console.log('from get all the STAT records');
-    fetch('http://localhost/peopleComparer/php/queries/getStats.php')
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  }
+  // getStats = () => {
+  //   console.log('from get all the STAT records');
+  //   fetch('http://localhost/peopleComparer/php/queries/getStats.php')
+  //     .then(res => res.json())
+  //     .then(res => console.log(res))
+  //     .catch(err => console.log(err));
+  // }
 
   // READ by single entry
   getById = () => {

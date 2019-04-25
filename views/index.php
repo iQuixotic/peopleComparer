@@ -16,7 +16,7 @@
     </div>
     
     <!-- Table -->
-    <table>
+    <table id='table-attachment'>
         <tr class='th-row'>
             <th class='th_first-name'>First Name</th>
             <th class='th_last-name'>Last Name</th> 
