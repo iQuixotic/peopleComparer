@@ -1,8 +1,6 @@
-const errLogStart = 'You know what your problem is... ';
-const errLogEnd = ' \n\n\n\t\t...dummy';
-let queryData, id;
 
-let tableId, tablefn, tableLn, tableHeight, tableWeight, tableAge, personArr;
+
+// let tableId, tablefn, tableLn, tableHeight, tableWeight, tableAge, personArr;
 
 // Watch for input changes
 $(document).ready(() => {
@@ -18,7 +16,7 @@ $(document).ready(() => {
       // http://localhost/prep_files/all_the_SQL/php/mysql/post.php')
       .then(res => res.json())
       .then(posts => console.log(JSON.stringify(posts)))
-      .catch(err => console.log(errLogStart, err, errLogEnd));
+      .catch(err => console.log(err));
   }
 
   // READ from db
@@ -31,13 +29,23 @@ $(document).ready(() => {
   }
 
   // READ by single entry
-  getById = () => {
-    console.log('I will UPDATE one record by ID', id);
-    fetch('http://localhost/prep_files/all_the_SQL/php/employees/getNames.php')
-      // http://localhost/prep_files/all_the_SQL/php/mysql/put.php')
-      .then(res => res.json())
-      .then(posts => console.log(JSON.stringify(posts)))
-      .catch(err => console.log(errLogStart, err, errLogEnd));
+  // getById = () => {
+  //   console.log('I will UPDATE one record by ID', id);
+  //   fetch('http://localhost/prep_files/all_the_SQL/php/employees/getNames.php')
+  //     // http://localhost/prep_files/all_the_SQL/php/mysql/put.php')
+  //     .then(res => res.json())
+  //     .then(posts => console.log(JSON.stringify(posts)))
+  //     .catch(err => console.log(err));
+  // }
+
+  send = (fn, ln, height, weight, age) => {
+    console.log(JSON.stringify(fn, ln, height, weight, age))
+    fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
+      method: 'post', 
+      body: [fn, ln, height, weight, age]
+    })
+      .then(res => console.log(res.text()))
+      .catch(err => console.log(err));
   }
 
   // UPDATE by id
@@ -47,7 +55,7 @@ $(document).ready(() => {
       // http://localhost/prep_files/all_the_SQL/php/mysql/update.php')
       .then(res => res.json())
       .then(posts => console.log(JSON.stringify(posts)))
-      .catch(err => console.log(errLogStart, err, errLogEnd));
+      .catch(err => console.log(err));
   }
 
   // DELETE an entry
@@ -57,7 +65,7 @@ $(document).ready(() => {
       // http://localhost/prep_files/all_the_SQL/php/mysql/del.php')
       .then(res => res.json())
       .then(posts => console.log(JSON.stringify(posts)))
-      .catch(err => console.log(errLogStart, err, errLogEnd));
+      .catch(err => console.log(err));
   }
 
   getAll();

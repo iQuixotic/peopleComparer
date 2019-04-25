@@ -23,8 +23,7 @@
             <th class='th_height'>Height</th>
             <th class='th_weight'>Weight</th>
             <th class='th_age'>Age</th>
-        </tr>
-       
+        </tr>       
     </table>
     
      <!-- New Person Inputs -->
@@ -32,12 +31,12 @@
         
         <div>
             <label for="fn">First Name: </label>
-            <input name = 'fn' type="text">
+            <input id='firstnameInput'  name = 'fn' type="text">
         </div>
     
             <div>
                 <label for="ln">Last Name: </label>
-                <input name = 'ln' type="text">
+                <input id='lastnameInput' name = 'ln' type="text">
             </div>
     
         </div>
@@ -46,21 +45,22 @@
             
             <div>
                 <label for="height">Height: </label>
-                <input name = 'height' type="text">
+                <input id='heightInput' name = 'heightInput' type="text">
             </div>
             <div>
                 <label for="weight">Weight: </label>
-                <input name = 'weight' type="text">
+                <input id='weightInput' name = 'weightInput' type="text">
             </div>
             <div>
                 <label for="age">Age: </label>
-                <input name = 'age' type="text">
+                <input id='ageInput' name = 'ageInput' type="text">
             </div>
     
         </div>
     
+        <button  onclick='inputSubmitter()' href="" class='btn_add-new q-btn'>Add New</button>
     
-        <a href="" class='btn_add-new q-btn'>Add New</a>
+        <!-- <a  onclick='inputSubmitter()' href="" class='btn_add-new q-btn'>Add New</a> -->
     
 </div>
 

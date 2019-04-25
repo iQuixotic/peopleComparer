@@ -14,3 +14,13 @@ tablePrinter = (arg) => {
         $('#table-attachment').append(myTblData);
     });
 }
+
+inputSubmitter = () => {
+    let firstnameInput = $('#firstnameInput').val()
+    let lastnameInput = $('#lastnameInput').val()
+    let heightInput = $('#heightInput').val()
+    let weightInput = $('#weightInput').val()
+    let ageInput = $('#ageInput').val()
+
+    send(firstnameInput, lastnameInput, heightInput, weightInput, ageInput);
+}
