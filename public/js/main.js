@@ -16,11 +16,27 @@ tablePrinter = (arg) => {
 }
 
 inputSubmitter = () => {
-    let firstnameInput = $('#firstnameInput').val()
-    let lastnameInput = $('#lastnameInput').val()
-    let heightInput = $('#heightInput').val()
-    let weightInput = $('#weightInput').val()
-    let ageInput = $('#ageInput').val()
 
-    send(firstnameInput, lastnameInput, heightInput, weightInput, ageInput);
+    
+
+    // myForm.addEventListener
+    // let firstnameInput = $('#firstnameInput').val()
+    // let lastnameInput = $('#lastnameInput').val()
+    // let heightInput = $('#heightInput').val()
+    // let weightInput = $('#weightInput').val()
+    // let ageInput = $('#ageInput').val()
+
+    // let data = {
+    //     fn: $('#firstnameInput').val(),
+    //     ln: $('#lastnameInput').val(),
+    //     height: $('#heightInput').val(),
+    //     weight: $('#weightInput').val(),
+    //     age: $('#ageInput').val()
+    //   }
+    //   console.log('data is ', data)
+
+    // send(firstnameInput, lastnameInput, heightInput, weightInput, ageInput);
+    // console.log($('#firstnameInput').val(), $('#lastnameInput').val(), $('#heightInput').val(), $('#weightInput').val(), $('#ageInput').val() );
+    send();
+
 }

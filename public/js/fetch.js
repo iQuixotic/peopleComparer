@@ -9,6 +9,22 @@ $(document).ready(() => {
     id = $('#query_id').val();
   })
 
+  const myForm = $('#myForm')
+
+    myForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      console.log(formData)
+
+      fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
+        method: 'post', 
+        body: formData
+      })
+        .then(res => console.log(res.text()))
+        .catch(err => console.log(err));
+    })
+
   // CREATE a new entry
   makeSomething = () => {
     console.log('I will CREATE a new record');
@@ -38,14 +54,8 @@ $(document).ready(() => {
   //     .catch(err => console.log(err));
   // }
 
-  send = (fn, ln, height, weight, age) => {
-    console.log(JSON.stringify(fn, ln, height, weight, age))
-    fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
-      method: 'post', 
-      body: [fn, ln, height, weight, age]
-    })
-      .then(res => console.log(res.text()))
-      .catch(err => console.log(err));
+  send = () => {
+    
   }
 
   // UPDATE by id

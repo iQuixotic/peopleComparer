@@ -26,39 +26,42 @@
         </tr>       
     </table>
     
-     <!-- New Person Inputs -->
-     <div class="input-row_1">
-        
-        <div>
-            <label for="fn">First Name: </label>
-            <input id='firstnameInput'  name = 'fn' type="text">
-        </div>
+    <form id="myForm" enctype="multipart/form-data">
+
+        <!-- New Person Inputs -->
+        <div class="input-row_1">
+           
+           <div>
+               <label for="fn">First Name: </label>
+               <input id='firstnameInput'  name = 'fn' type="text">
+           </div>
+       
+               <div>
+                   <label for="ln">Last Name: </label>
+                   <input id='lastnameInput' name = 'ln' type="text">
+               </div>
+       
+           </div>
+       
+           <div class="input-row_2">
+               
+               <div>
+                   <label for="height">Height: </label>
+                   <input id='heightInput' name = 'heightInput' type="text">
+               </div>
+               <div>
+                   <label for="weight">Weight: </label>
+                   <input id='weightInput' name = 'weightInput' type="text">
+               </div>
+               <div>
+                   <label for="age">Age: </label>
+                   <input id='ageInput' name = 'ageInput' type="text">
+               </div>
+       
+           </div>
+           <button  type='submit' href="" class='btn_add-new q-btn'>Add New</button>
+    </form>
     
-            <div>
-                <label for="ln">Last Name: </label>
-                <input id='lastnameInput' name = 'ln' type="text">
-            </div>
-    
-        </div>
-    
-        <div class="input-row_2">
-            
-            <div>
-                <label for="height">Height: </label>
-                <input id='heightInput' name = 'heightInput' type="text">
-            </div>
-            <div>
-                <label for="weight">Weight: </label>
-                <input id='weightInput' name = 'weightInput' type="text">
-            </div>
-            <div>
-                <label for="age">Age: </label>
-                <input id='ageInput' name = 'ageInput' type="text">
-            </div>
-    
-        </div>
-    
-        <button  onclick='inputSubmitter()' href="" class='btn_add-new q-btn'>Add New</button>
     
         <!-- <a  onclick='inputSubmitter()' href="" class='btn_add-new q-btn'>Add New</a> -->
     
