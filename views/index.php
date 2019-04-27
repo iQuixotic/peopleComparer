@@ -26,7 +26,7 @@
         </tr>       
     </table>
     
-    <form id="myForm" enctype="multipart/form-data">
+    <form class='form' id="myForm">
 
         <!-- New Person Inputs -->
         <div class="input-row_1">
@@ -59,7 +59,7 @@
                </div>
        
            </div>
-           <button  type='submit' href="" class='btn_add-new q-btn'>Add New</button>
+           <button  type='submit' class='btn_add-new q-btn'>Add New</button>
     </form>
     
     

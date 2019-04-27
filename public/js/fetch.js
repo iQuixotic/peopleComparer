@@ -1,4 +1,20 @@
 
+const myForm = document.getElementById('myForm')
+console.log(myForm)
+
+myForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(this);
+  console.log(formData)
+
+  fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
+    method: 'post', 
+    body: formData
+  })
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+})
 
 // let tableId, tablefn, tableLn, tableHeight, tableWeight, tableAge, personArr;
 
@@ -9,21 +25,7 @@ $(document).ready(() => {
     id = $('#query_id').val();
   })
 
-  const myForm = $('#myForm')
-
-    myForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      console.log(formData)
-
-      fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
-        method: 'post', 
-        body: formData
-      })
-        .then(res => console.log(res.text()))
-        .catch(err => console.log(err));
-    })
+  
 
   // CREATE a new entry
   makeSomething = () => {

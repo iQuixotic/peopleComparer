@@ -7,7 +7,7 @@ PRIMARY KEY (`id`)) ENGINE = InnoDB;
 -- -------------------------------------------------------------------------------------- --
 
 CREATE TABLE `comparablepeople_db` . `stats`( 
-`personId` INT(10) NOT NULL ,
+`personId` INT(10) AUTO_INCREMENT NOT NULL ,
 `height` INT(10) NOT NULL , 
 `weight` INT(10) NOT NULL , 
 `age` INT(10) NOT NULL ,
