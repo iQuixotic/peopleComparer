@@ -47,15 +47,15 @@
                
                <div>
                    <label for="height">Height: </label>
-                   <input id='heightInput' name = 'heightInput' type="text">
+                   <input id='heightInput' name = 'height' type="text">
                </div>
                <div>
                    <label for="weight">Weight: </label>
-                   <input id='weightInput' name = 'weightInput' type="text">
+                   <input id='weightInput' name = 'weight' type="text">
                </div>
                <div>
                    <label for="age">Age: </label>
-                   <input id='ageInput' name = 'ageInput' type="text">
+                   <input id='ageInput' name = 'age' type="text">
                </div>
        
            </div>

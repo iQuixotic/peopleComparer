@@ -5,7 +5,7 @@
 // $id = $_GET['id'];
 // $query = "SELECT * FROM names";
 $query = "SELECT names.id, names.firstname, names.lastname, 
-          stats.height, stats.weight, stats.age
+          stats.height, stats.weigh, stats.age
           FROM names INNER JOIN stats
           ON names.id = stats.personId";
 
@@ -20,7 +20,7 @@ while($row = mysqli_fetch_assoc($result)) {
     'lastname' => $row['lastname'],
     // 'personId' => $row['personId'], 
     'height' => $row['height'],
-    'weight' => $row['weight'],
+    'weight' => $row['weigh'],
     'age' => $row['age']);
 }    
 

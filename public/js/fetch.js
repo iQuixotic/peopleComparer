@@ -8,9 +8,16 @@ myForm.addEventListener('submit', function(e) {
   const formData = new FormData(this);
   console.log(formData)
 
-  fetch('http://localhost/peopleComparer/php/queries/addPerson.php', {
+  fetch('http://localhost/peopleComparer/php/queries/addPerson/addName.php', {
     method: 'post', 
     body: formData
+  })
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+
+    fetch('http://localhost/peopleComparer/php/queries/addPerson/addStats.php', {
+      method: 'post', 
+      body: formData
   })
     .then(res => console.log(res))
     .catch(err => console.log(err));
