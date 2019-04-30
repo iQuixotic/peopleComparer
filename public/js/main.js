@@ -1,10 +1,8 @@
-
 tablePrinter = (arg) => {
-    // console.log('personArr arg', arg)
     arg.forEach(el => {
         console.log('arg.id', el.id)      
         let myTblData = `
-            <tr>
+            <tr id='${el.id}' onclick='selected(${el.id})'>
                 <td class='td_first-name'>${el.firstname}</td>
                 <td class='td_last-name'>${el.lastname}</td> 
                 <td class='td_height'>${el.height}</td> 
@@ -13,6 +11,10 @@ tablePrinter = (arg) => {
             </tr>`  
         $('#table-attachment').append(myTblData);
     });
+}
+
+selected = (id) => {
+    console.log()
 }
 
 inputSubmitter = () => {

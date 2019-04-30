@@ -73,6 +73,14 @@ th, td, label, input {
     font-size: 1.6rem;
 }
 
+tr:hover{
+    background: rgba(87, 87, 87, 0.5);
+}
+
+.th-row:hover {
+    background: none;
+}
+
 label {
     display: inline-block;
     /* background: orange; */
@@ -92,12 +100,6 @@ input {
 .input-row_2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
-
-.input-row_1 div,
-.input-row_2 div {
-    /* background: greenyellow; */
-   
 }
 
 .btn_add-new {
