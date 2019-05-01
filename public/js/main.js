@@ -10,35 +10,27 @@ tablePrinter = (arg) => {
                 <td class='td_age'>${el.age}</td>
             </tr>`  
         $('#table-attachment').append(myTblData);
+
+       
+
     });
 }
 
+
+// $('tr').on("click", function() {
+//     $(`#${el.id}`).toggleClass("trselected")   
+//     console.log(el.id)         
+// });
+
 selected = (id) => {
-    console.log()
+    $(`#${id}`).toggleClass("trselected")   
+    console.log(id)
 }
 
 inputSubmitter = () => {
 
     
 
-    // myForm.addEventListener
-    // let firstnameInput = $('#firstnameInput').val()
-    // let lastnameInput = $('#lastnameInput').val()
-    // let heightInput = $('#heightInput').val()
-    // let weightInput = $('#weightInput').val()
-    // let ageInput = $('#ageInput').val()
-
-    // let data = {
-    //     fn: $('#firstnameInput').val(),
-    //     ln: $('#lastnameInput').val(),
-    //     height: $('#heightInput').val(),
-    //     weight: $('#weightInput').val(),
-    //     age: $('#ageInput').val()
-    //   }
-    //   console.log('data is ', data)
-
-    // send(firstnameInput, lastnameInput, heightInput, weightInput, ageInput);
-    // console.log($('#firstnameInput').val(), $('#lastnameInput').val(), $('#heightInput').val(), $('#weightInput').val(), $('#ageInput').val() );
     send();
 
 }

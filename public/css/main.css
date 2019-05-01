@@ -73,7 +73,8 @@ th, td, label, input {
     font-size: 1.6rem;
 }
 
-tr:hover{
+tr:hover, 
+.trselected {
     background: rgba(87, 87, 87, 0.5);
 }
 
